@@ -1,0 +1,38 @@
+{
+	"name": "kermage/external-update-manager",
+	"description": "A drop-in library for WordPress themes or plugins to manage updates.",
+	"type": "wordpress-dropin",
+	"license": "GPL-3.0-only",
+	"authors": [
+		{
+			"name": "Gene Alyson Fortunado Torcende",
+			"email": "genealyson.torcende@gmail.com"
+		}
+	],
+	"keywords": [
+		"wordpress",
+		"dropin"
+	],
+	"config": {
+		"allow-plugins": {
+			"phpstan/extension-installer": true,
+			"dealerdirect/phpcodesniffer-composer-installer": true
+		}
+	},
+	"require": {
+		"ext-json": "*",
+		"php": ">=5.6.0"
+	},
+	"autoload": {
+		"files": [
+			"class-external-update-manager.php"
+		]
+	},
+	"require-dev": {
+		"themeplate/tester": "^2.2"
+	},
+	"scripts": {
+		"lint": "phpcs --colors -p -s -v",
+		"fix": "phpcbf -p -v"
+	}
+}

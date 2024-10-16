@@ -1,0 +1,13 @@
+parameters:
+  level: 5
+  excludePaths:
+    - vendor
+  scanFiles:
+    - cardanopress-taptools.php
+  scanDirectories:
+    - %currentWorkingDirectory%/.cache/wordpress
+    - %currentWorkingDirectory%/.cache/wordpress-tests-lib
+    - %currentWorkingDirectory%/dependencies
+    - %currentWorkingDirectory%/../cardanopress
+  dynamicConstantNames:
+    - CP_TAPTOOLS_FILE
