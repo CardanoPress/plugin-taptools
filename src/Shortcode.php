@@ -33,6 +33,17 @@ class Shortcode implements HookInterface
             return '';
         }
 
-        return print_r($args, true);
+        $display = get_post_meta($args['id'], 'widget_display', true);
+
+        if ('single' === $display) {
+            $token = get_post_meta($args['id'], 'widget_token', true);
+
+            return print_r($token, true);
+        }
+
+        $style = get_post_meta($args['id'], 'widget_style', true);
+        $type = get_post_meta($args['id'], 'widget_type', true);
+
+        return print_r(compact('style', 'type'), true);
     }
 }

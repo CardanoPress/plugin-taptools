@@ -9,23 +9,28 @@ namespace PBWebDev\CardanoPress\TapTools;
 
 use CardanoPress\Foundation\AbstractApplication;
 use CardanoPress\Traits\Configurable;
+use CardanoPress\Traits\Enqueueable;
 use CardanoPress\Traits\Instantiable;
 
 class Application extends AbstractApplication
 {
     use Configurable;
+    use Enqueueable;
     use Instantiable;
 
     protected function initialize(): void
     {
         $this->setInstance($this);
 
+        $path = plugin_dir_path($this->getPluginFile());
         $this->admin = new Admin($this->logger('admin'));
+        $this->manifest = new Manifest($path . 'assets/dist', $this->getData('Version'));
     }
 
     public function setupHooks(): void
     {
         $this->admin->setupHooks();
+        $this->manifest->setupHooks();
 
         add_action('cardanopress_loaded', [$this, 'init']);
     }

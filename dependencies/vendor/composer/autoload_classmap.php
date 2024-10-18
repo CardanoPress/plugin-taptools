@@ -10,5 +10,6 @@ return array(
     'PBWebDev\\CardanoPress\\TapTools\\Admin' => $baseDir . '/../src/Admin.php',
     'PBWebDev\\CardanoPress\\TapTools\\Application' => $baseDir . '/../src/Application.php',
     'PBWebDev\\CardanoPress\\TapTools\\Installer' => $baseDir . '/../src/Installer.php',
+    'PBWebDev\\CardanoPress\\TapTools\\Manifest' => $baseDir . '/../src/Manifest.php',
     'PBWebDev\\CardanoPress\\TapTools\\Shortcode' => $baseDir . '/../src/Shortcode.php',
 );
