@@ -8,7 +8,9 @@ $baseDir = dirname($vendorDir);
 return array(
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
     'PBWebDev\\CardanoPress\\TapTools\\Admin' => $baseDir . '/../src/Admin.php',
+    'PBWebDev\\CardanoPress\\TapTools\\Api' => $baseDir . '/../src/Api.php',
     'PBWebDev\\CardanoPress\\TapTools\\Application' => $baseDir . '/../src/Application.php',
+    'PBWebDev\\CardanoPress\\TapTools\\Client' => $baseDir . '/../src/Client.php',
     'PBWebDev\\CardanoPress\\TapTools\\Installer' => $baseDir . '/../src/Installer.php',
     'PBWebDev\\CardanoPress\\TapTools\\Manifest' => $baseDir . '/../src/Manifest.php',
     'PBWebDev\\CardanoPress\\TapTools\\Shortcode' => $baseDir . '/../src/Shortcode.php',

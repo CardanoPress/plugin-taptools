@@ -54,7 +54,9 @@ class ComposerStaticInit911945dafdb553f20c2d689aefa1f07d
     public static $classMap = array (
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'PBWebDev\\CardanoPress\\TapTools\\Admin' => __DIR__ . '/../..' . '/../src/Admin.php',
+        'PBWebDev\\CardanoPress\\TapTools\\Api' => __DIR__ . '/../..' . '/../src/Api.php',
         'PBWebDev\\CardanoPress\\TapTools\\Application' => __DIR__ . '/../..' . '/../src/Application.php',
+        'PBWebDev\\CardanoPress\\TapTools\\Client' => __DIR__ . '/../..' . '/../src/Client.php',
         'PBWebDev\\CardanoPress\\TapTools\\Installer' => __DIR__ . '/../..' . '/../src/Installer.php',
         'PBWebDev\\CardanoPress\\TapTools\\Manifest' => __DIR__ . '/../..' . '/../src/Manifest.php',
         'PBWebDev\\CardanoPress\\TapTools\\Shortcode' => __DIR__ . '/../..' . '/../src/Shortcode.php',

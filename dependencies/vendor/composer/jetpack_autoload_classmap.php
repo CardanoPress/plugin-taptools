@@ -1446,9 +1446,17 @@ return array(
 		'version' => 'dev-main',
 		'path'    => $baseDir . '/../src/Admin.php'
 	),
+	'PBWebDev\\CardanoPress\\TapTools\\Api' => array(
+		'version' => 'dev-main',
+		'path'    => $baseDir . '/../src/Api.php'
+	),
 	'PBWebDev\\CardanoPress\\TapTools\\Application' => array(
 		'version' => 'dev-main',
 		'path'    => $baseDir . '/../src/Application.php'
+	),
+	'PBWebDev\\CardanoPress\\TapTools\\Client' => array(
+		'version' => 'dev-main',
+		'path'    => $baseDir . '/../src/Client.php'
 	),
 	'PBWebDev\\CardanoPress\\TapTools\\Installer' => array(
 		'version' => 'dev-main',
