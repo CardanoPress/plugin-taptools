@@ -41,7 +41,10 @@ class Shortcode implements HookInterface
             $token = get_post_meta($args['id'], 'widget_token', true);
             $result = $this->api->getTokenPrices([$token]);
 
-            return $result[$token];
+            ob_start();
+            $this->application->template('label', compact('result', 'token'));
+
+            return ob_get_clean();
         }
 
         $style = get_post_meta($args['id'], 'widget_style', true);
@@ -56,6 +59,9 @@ class Shortcode implements HookInterface
             $result = $this->api->getTokenPrices($tokens);
         }
 
-        return print_r(compact('result', 'style', 'type'), true);
+        ob_start();
+        $this->application->template($style, compact('result'));
+
+        return ob_get_clean();
     }
 }

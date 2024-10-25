@@ -60,6 +60,7 @@ class ComposerStaticInit911945dafdb553f20c2d689aefa1f07d
         'PBWebDev\\CardanoPress\\TapTools\\Installer' => __DIR__ . '/../..' . '/../src/Installer.php',
         'PBWebDev\\CardanoPress\\TapTools\\Manifest' => __DIR__ . '/../..' . '/../src/Manifest.php',
         'PBWebDev\\CardanoPress\\TapTools\\Shortcode' => __DIR__ . '/../..' . '/../src/Shortcode.php',
+        'PBWebDev\\CardanoPress\\TapTools\\Templates' => __DIR__ . '/../..' . '/../src/Templates.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

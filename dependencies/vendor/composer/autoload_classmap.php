@@ -14,4 +14,5 @@ return array(
     'PBWebDev\\CardanoPress\\TapTools\\Installer' => $baseDir . '/../src/Installer.php',
     'PBWebDev\\CardanoPress\\TapTools\\Manifest' => $baseDir . '/../src/Manifest.php',
     'PBWebDev\\CardanoPress\\TapTools\\Shortcode' => $baseDir . '/../src/Shortcode.php',
+    'PBWebDev\\CardanoPress\\TapTools\\Templates' => $baseDir . '/../src/Templates.php',
 );

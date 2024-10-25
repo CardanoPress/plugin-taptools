@@ -1470,6 +1470,10 @@ return array(
 		'version' => 'dev-main',
 		'path'    => $baseDir . '/../src/Shortcode.php'
 	),
+	'PBWebDev\\CardanoPress\\TapTools\\Templates' => array(
+		'version' => 'dev-main',
+		'path'    => $baseDir . '/../src/Templates.php'
+	),
 	'PHP_Autoloader' => array(
 		'version' => '2.12.0',
 		'path'    => $vendorDir . '/automattic/jetpack-autoloader/src/class-php-autoloader.php'
