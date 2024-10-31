@@ -85,4 +85,11 @@ class Api
 
         return 200 === $response['status_code'] ? $response['data'] : [];
     }
+
+    public function getTokenById(string $id): array
+    {
+        $response = $this->get('integration/asset', compact('id'));
+
+        return 200 === $response['status_code'] ? $response['data'] : [];
+    }
 }
