@@ -9,7 +9,7 @@
  * @since   0.1.0
  */
 
-if (empty($result)) {
+if (empty($result) || empty($asset)) {
     return;
 }
 
@@ -19,4 +19,4 @@ if (empty($token)) {
 
 ?>
 
-<pre>Result: <?php print_r($result[$token]); ?></pre>
+<div><b><?php echo $asset['symbol']; ?></b>: <?php echo $result[$token]; ?></div>

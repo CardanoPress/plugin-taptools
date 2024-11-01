@@ -39,10 +39,17 @@ class Shortcode implements HookInterface
 
         if ('single' === $display) {
             $token = get_post_meta($args['id'], 'widget_token', true);
+            $asset = $this->api->getTokenById($token);
+
+            if (empty($asset) || empty($asset['asset'])) {
+                return '';
+            }
+
+            $asset = $asset['asset'];
             $result = $this->api->getTokenPrices([$token]);
 
             ob_start();
-            $this->application->template('label', compact('result', 'token'));
+            $this->application->template('label', compact('result', 'token', 'asset'));
 
             return ob_get_clean();
         }
