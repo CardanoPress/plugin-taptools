@@ -9,7 +9,7 @@
  * @since   0.1.0
  */
 
-if (empty($result)) {
+if (empty($result) || empty($tokens)) {
     return;
 }
 
@@ -53,7 +53,9 @@ if (empty($result)) {
 <div class="marquee-container">
     <div class="marquee-content">
         <?php foreach ($result as $token => $price) : ?>
-            <span class="marquee-item"><?php echo $token; ?> = <?php echo $price; ?></span>
+            <span class="marquee-item">
+                <?php echo $tokens[$token]['symbol'] ?? ''; ?> = <?php echo $price; ?>
+            </span>
         <?php endforeach; ?>
     </div>
 </div>

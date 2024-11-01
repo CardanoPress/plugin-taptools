@@ -66,8 +66,20 @@ class Shortcode implements HookInterface
             $result = $this->api->getTokenPrices($tokens);
         }
 
+        $data = array_map(function ($unit) {
+            $asset = $this->api->getTokenById($unit);
+
+            if (empty($asset) || empty($asset['asset'])) {
+                return array();
+            }
+
+            return $asset['asset'];
+        }, array_keys($result));
+
+        $tokens = array_combine(array_keys($result), $data);
+
         ob_start();
-        $this->application->template($style, compact('result'));
+        $this->application->template($style, compact('result', 'tokens'));
 
         return ob_get_clean();
     }

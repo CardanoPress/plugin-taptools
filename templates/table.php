@@ -9,7 +9,7 @@
  * @since   0.1.0
  */
 
-if (empty($result)) {
+if (empty($result) || empty($tokens)) {
     return;
 }
 
@@ -27,7 +27,7 @@ if (empty($result)) {
         <?php foreach ($result as $token => $price) : ?>
             <tr>
                 <td>
-                    <?php echo $token; ?>
+                    <?php echo $tokens[$token]['symbol'] ?? $token; ?>
                 </td>
                 <td>
                     <?php echo $price; ?>
