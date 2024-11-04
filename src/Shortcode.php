@@ -45,11 +45,12 @@ class Shortcode implements HookInterface
                 return '';
             }
 
-            $asset = $asset['asset'];
             $result = $this->api->getTokenPrices([$token]);
+            $result = $result[$token];
+            $token = $asset['asset'];
 
             ob_start();
-            $this->application->template('label', compact('result', 'token', 'asset'));
+            $this->application->template('label', compact('result', 'token'));
 
             return ob_get_clean();
         }
@@ -66,7 +67,8 @@ class Shortcode implements HookInterface
             $result = $this->api->getTokenPrices($tokens);
         }
 
-        $data = array_map(function ($unit) {
+        $tokens = array_keys($result);
+        $tokens = array_combine($tokens, array_map(function ($unit) {
             $asset = $this->api->getTokenById($unit);
 
             if (empty($asset) || empty($asset['asset'])) {
@@ -74,9 +76,7 @@ class Shortcode implements HookInterface
             }
 
             return $asset['asset'];
-        }, array_keys($result));
-
-        $tokens = array_combine(array_keys($result), $data);
+        }, $tokens));
 
         ob_start();
         $this->application->template($style, compact('result', 'tokens'));

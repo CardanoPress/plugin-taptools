@@ -9,14 +9,10 @@
  * @since   0.1.0
  */
 
-if (empty($result) || empty($asset)) {
+if (empty($result) || empty($token)) {
     return;
-}
-
-if (empty($token)) {
-    $token = reset($result);
 }
 
 ?>
 
-<div><b><?php echo $asset['symbol']; ?></b>: <?php echo $result[$token]; ?></div>
+<div><b><?php echo $token['symbol']; ?></b>: <?php echo $result; ?></div>
