@@ -20,26 +20,20 @@ if (empty($result) || empty($tokens)) {
         width: 100%;
         overflow: hidden;
         position: relative;
+        display: flex;
     }
 
     .marquee-content {
-        width: 1000%;
         display: flex;
-        animation: marquee 50s linear infinite;
+        animation: marquee <?php echo count($result) * 5; ?>s linear infinite;
     }
 
     .marquee-item {
-        flex: 0 0 auto;
-        display: block;
-        position: relative;
+        white-space: nowrap;
         padding: 0 10px;
     }
 
     @keyframes marquee {
-        0% {
-            transform: translateX(0%);
-        }
-
         100% {
             transform: translateX(-100%);
         }
@@ -59,3 +53,12 @@ if (empty($result) || empty($tokens)) {
         <?php endforeach; ?>
     </div>
 </div>
+
+<script>
+    document
+        .querySelector('.marquee-container')
+        .append(document
+            .querySelector('.marquee-content')
+            .cloneNode(true)
+        )
+</script>
