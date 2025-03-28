@@ -35,10 +35,10 @@ class Shortcode implements HookInterface
             return '';
         }
 
-        $display = get_post_meta($args['id'], 'widget_display', true);
+        $display = get_post_meta((int) $args['id'], 'widget_display', true);
 
         if ('single' === $display) {
-            $token = get_post_meta($args['id'], 'widget_token', true);
+            $token = get_post_meta((int) $args['id'], 'widget_token', true);
             $asset = $this->api->getTokenById($token);
 
             if (empty($asset) || empty($asset['asset'])) {
@@ -55,14 +55,14 @@ class Shortcode implements HookInterface
             return ob_get_clean();
         }
 
-        $style = get_post_meta($args['id'], 'widget_style', true);
-        $type = get_post_meta($args['id'], 'widget_type', true);
+        $style = get_post_meta((int) $args['id'], 'widget_style', true);
+        $type = get_post_meta((int) $args['id'], 'widget_type', true);
 
         if ('top' === $type) {
             $result = $this->api->getTopMarketCapTokens();
             $result = array_column($result, 'price', 'unit');
         } else {
-            $tokens = get_post_meta($args['id'], 'widget_tokens', true);
+            $tokens = get_post_meta((int) $args['id'], 'widget_tokens', true);
             $tokens = array_filter(preg_split('/\r\n|[\r\n]/', $tokens));
             $result = $this->api->getTokenPrices($tokens);
         }
