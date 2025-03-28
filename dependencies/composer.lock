@@ -29,17 +29,17 @@
             },
             "type": "composer-plugin",
             "extra": {
-                "autotagger": true,
                 "class": "Automattic\\Jetpack\\Autoloader\\CustomAutoloaderPlugin",
+                "autotagger": true,
                 "mirror-repo": "Automattic/jetpack-autoloader",
+                "branch-alias": {
+                    "dev-trunk": "2.12.x-dev"
+                },
                 "changelogger": {
                     "link-template": "https://github.com/Automattic/jetpack-autoloader/compare/v${old}...v${new}"
                 },
                 "version-constants": {
                     "::VERSION": "src/AutoloadGenerator.php"
-                },
-                "branch-alias": {
-                    "dev-trunk": "2.12.x-dev"
                 }
             },
             "autoload": {
@@ -70,21 +70,21 @@
         },
         {
             "name": "cardanopress/framework",
-            "version": "v2.8.0",
+            "version": "v2.11.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/CardanoPress/framework.git",
-                "reference": "ec85910d34692d4294139f45ae54f81eb18d2372"
+                "reference": "21c190cf93dfd28242090978f1ddf2af34dbad09"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/CardanoPress/framework/zipball/ec85910d34692d4294139f45ae54f81eb18d2372",
-                "reference": "ec85910d34692d4294139f45ae54f81eb18d2372",
+                "url": "https://api.github.com/repos/CardanoPress/framework/zipball/21c190cf93dfd28242090978f1ddf2af34dbad09",
+                "reference": "21c190cf93dfd28242090978f1ddf2af34dbad09",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
-                "php": "^7.4|^8.0"
+                "php": "^7.4|^8.2"
             },
             "require-dev": {
                 "automattic/jetpack-autoloader": "^2.12",
@@ -121,22 +121,22 @@
             ],
             "support": {
                 "issues": "https://github.com/CardanoPress/framework/issues",
-                "source": "https://github.com/CardanoPress/framework/tree/v2.8.0"
+                "source": "https://github.com/CardanoPress/framework/tree/v2.11.0"
             },
-            "time": "2024-10-01T08:48:08+00:00"
+            "time": "2025-03-24T07:31:48+00:00"
         },
         {
             "name": "kermage/external-update-manager",
-            "version": "v2.3.0",
+            "version": "v2.6.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/kermage/External-Update-Manager.git",
-                "reference": "c83420d8668c4e970edfed6249b8fa02f45d2d05"
+                "reference": "21e05094e7c53efda35f5ced6362fb6d2d68486f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kermage/External-Update-Manager/zipball/c83420d8668c4e970edfed6249b8fa02f45d2d05",
-                "reference": "c83420d8668c4e970edfed6249b8fa02f45d2d05",
+                "url": "https://api.github.com/repos/kermage/External-Update-Manager/zipball/21e05094e7c53efda35f5ced6362fb6d2d68486f",
+                "reference": "21e05094e7c53efda35f5ced6362fb6d2d68486f",
                 "shasum": ""
             },
             "require": {
@@ -169,9 +169,9 @@
             ],
             "support": {
                 "issues": "https://github.com/kermage/External-Update-Manager/issues",
-                "source": "https://github.com/kermage/External-Update-Manager/tree/v2.3.0"
+                "source": "https://github.com/kermage/External-Update-Manager/tree/v2.6.1"
             },
-            "time": "2024-06-21T01:12:11+00:00"
+            "time": "2025-03-24T15:38:33+00:00"
         }
     ],
     "packages-dev": [],
