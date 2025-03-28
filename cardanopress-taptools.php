@@ -1,4 +1,4 @@
-<?php
+<?php // phpcs:ignore PSR1.Files.SideEffects.FoundWithSymbols
 
 /**
  * Plugin Name: CardanoPress - TapTools
@@ -41,6 +41,7 @@ if (! defined('CP_TAPTOOLS_FILE')) {
 require_once plugin_dir_path(CP_TAPTOOLS_FILE) . 'dependencies/vendor/autoload_packages.php';
 
 // Instantiate the updater
+// phpcs:ignore Generic.Files.LineLength.TooLong
 EUM_Handler::run(CP_TAPTOOLS_FILE, 'https://raw.githubusercontent.com/CardanoPress/plugin-taptools/main/update-data.json');
 
 // Instantiate

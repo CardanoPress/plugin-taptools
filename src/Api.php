@@ -37,7 +37,7 @@ class Api
 
     public function request(string $method, string $endpoint, array $options = []): array
     {
-        $response = $this->client->request($method,$endpoint, $options);
+        $response = $this->client->request($method, $endpoint, $options);
         $this->lastResponse = $response;
 
         if (200 !== $response['status_code'] || ! empty($response['error'])) {

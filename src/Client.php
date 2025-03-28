@@ -87,8 +87,9 @@ class Client
     /**
      * Make a request to the API endpoint
      *
+     * @param  string  $method
      * @param  string  $endpoint
-     * @param  array   $query
+     * @param  array   $options
      *
      * @return array
      */
