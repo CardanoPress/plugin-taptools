@@ -23,7 +23,6 @@ class Admin extends AbstractAdmin
     {
         add_filter('post_type_labels_taptool', [$this, 'postTypeLabels']);
 
-
         $this->settingsPage('CardanoPress - TapTools', [
             'parent' => 'edit.php?post_type=taptool',
             'menu_title' => 'Settings',
@@ -45,7 +44,7 @@ class Admin extends AbstractAdmin
 
     public function settingsFields(): void
     {
-        $this->optionFields(__('API Key', 'cardanopress-governance'), [
+        $this->optionFields(__('API Key', 'cardanopress-taptools'), [
             'data_prefix' => 'api_',
             'fields' => [
                 'key' => [

@@ -41,6 +41,8 @@ class Application extends AbstractApplication
 
     public function init(): void
     {
+        load_plugin_textdomain($this->getData('TextDomain'));
+
         (new Shortcode())->setupHooks();
     }
 
